@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="author" content="David McNeary">
+        <meta name="description" content="IT'S TRANSIT TIME!!!!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/style.css" type="text/css">
+        <title>Transit Time Tracker</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="display-4">Transit Time Tracker</h1>
+                <p class="lead">A simple tracker for Big Blue Bus in the Los Angeles area.</p>
+                <hr class="my-4">
+                <p>To start, click on a transit line from the directory below, or enter your own custom info.</p>
+            </div>
+            <div class="col col-md-6" id="directory">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Click here to choose route</button>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#" id="route-1">Route 1</a>
+                        <a class="dropdown-item" href="#" id="route-2">Route 2</a>
+                        <a class="dropdown-item" href="#" id="route-3">Route 3</a>
+                        <a class="dropdown-item" href="#" id="route-4">Rapid 3</a>
+                        <a class="dropdown-item" href="#" id="route-5">Route 5</a>
+                        <a class="dropdown-item" href="#" id="route-7">Route 7</a>
+                        <a class="dropdown-item" href="#" id="route-6">Rapid 7</a>
+                        <a class="dropdown-item" href="#" id="route-8">Route 8</a>
+                        <a class="dropdown-item" href="#" id="route-9">Route 9</a>
+                        <a class="dropdown-item" href="#" id="route-10">Route 10</a>
+                        <a class="dropdown-item" href="#" id="route-12">Route 12</a>
+                        <a class="dropdown-item" href="#" id="route-14">Route 14</a>
+                        <a class="dropdown-item" href="#" id="route-15">Route 15</a>
+                        <a class="dropdown-item" href="#" id="route-16">Route 16</a>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                </div>
+            </div>
+            <div class="row">     
+                <div class="card col col-md-6">
+                    <div class="card-header">
+                        Add a line
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Create a custom line to add to the tracker:</h5>
+                        <form>
+                            <div class="form-group">
+                                <label for="line-number-input">Line Number</label>
+                                <input class="form-control" id="line-number-input" type="text">
+                                <label for="line-name-input">Line Name</label>
+                                <input class="form-control" id="line-name-input" type="text">
+                                <label for="first-depart-input">First Departure</label>
+                                <input class="form-control" id="first-depart-input" type="text">
+                                <label for="frequency-input">Frequency (in minutes)</label>
+                                <input class="form-control" id="frequency-input" type="text">
+                            </div>
+                            <button class="btn btn-primary float-right" id="add-line-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col col-md-6" id="tracker">
+                    <table>
+                        <tr>
+                            <th>Line number</th>
+                            <th>Line name</th>
+                            <th>Destination</th>
+                            <th>Frequency</th>
+                            <th>Next arrival</th>
+                            <th>Minutes away</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+
+
+
+        <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    </body>
+</html>
