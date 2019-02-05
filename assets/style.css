@@ -1,0 +1,14 @@
+body, .card-body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #123E50;
+    color: #EEE;
+}
+
+.jumbotron, .card-header {
+    background-color: #82ACBD;
+    color: #111;
+}
+
+table {
+    border: 1px dashed lightblue;
+}

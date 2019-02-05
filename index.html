@@ -6,19 +6,14 @@
         <meta name="description" content="IT'S TRANSIT TIME!!!!">
         <meta name="viewport" content="width=device-width" initial-scale="1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="assets/style.css" type="text/css">
         <title>Transit Time Tracker</title>
     </head>
-    <!-- body TO-DO:
-    fix padding for card
-    make table look better - padding, borders
-    dropdown buttons - what exactly are they doing? showing route on click? change display class?
-    
-    -->
     <body>
         <div class="container">
             <div class="jumbotron">
                 <h1 class="display-4">Transit Time Tracker</h1>
+                <img class="float-right" src="assets/images/BBB-logo.png" />
                 <p class="lead">A simple tracker for Big Blue Bus in the Los Angeles area.</p>
                 <hr class="my-4">
                 <p>To start, click on a transit line from the directory below, or enter your own custom info.</p>
@@ -47,7 +42,7 @@
                 </div>
             </div>
             <div class="row">     
-                <div class="card col col-md-6">
+                <div class="card">
                     <div class="card-header">
                         Add a line
                     </div>
@@ -69,24 +64,21 @@
                     </div>
                 </div>
                 <div class="col col-md-6">
-                    <table id="tracker">
-                        <tr>
-                            <th>Line number</th>
-                            <th>Line name</th>
-                            <th>Frequency</th>
-                            <th>Next arrival</th>
-                            <th>Minutes away</th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                    <table id="tracker" class="table">
+                        <tr scope="row">
+                            <th scope="col">Line number</th>
+                            <th scope="col">Line name</th>
+                            <th scope="col">Frequency</th>
+                            <th scope="col">Next arrival</th>
+                            <th scope="col">Minutes away</th>
                         </tr>
                     </table>
                 </div>
+            </div>
+            <div class="row">
+                <footer class="col text-center">
+                    Click <a href="https://www.bigbluebus.com/routes-and-schedules/" target="_blank">here</a> for more accurate Big Blue Bus times
+                </footer>
             </div>
         </div>
     
@@ -99,7 +91,7 @@
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
         <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="app.js"></script>
+        <script src="assets/app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     </body>
